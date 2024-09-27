@@ -8,7 +8,7 @@ body {
   font-family: "Inter", sans-serif;
 }
 
-@layer utilities {
+/* @layer utilities {
   .flex-center {
     @apply flex items-center justify-center;
   }
@@ -98,10 +98,10 @@ body {
 
   .custom-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #555;
-  }
+  } */
 
   /* Markdown Start */
-  .markdown a {
+  /* .markdown a {
     color: #1da1f2;
   }
 
@@ -130,11 +130,11 @@ body {
     display: block;
     overflow-x: auto;
     color: inherit !important;
-  }
+  } */
   /* Markdown End */
 
   /* Clerk */
-  .cl-internal-b3fm6y {
+  /* .cl-internal-b3fm6y {
     background: linear-gradient(129deg, #ff7000 0%, #e2995f 100%) !important;
   }
 
@@ -152,4 +152,4 @@ body {
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
-}
+}  */
