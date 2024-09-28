@@ -1,59 +1,63 @@
-import React from 'react';
-import {
-  ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
-} from '@clerk/nextjs';
-import {Inter, Space_Grotesk, Vazirmatn} from 'next/font/google'
-import './globals.css';
-import type { Metadata } from 'next';
+import React from "react";
+import { ClerkProvider, SignedIn, UserButton } from "@clerk/nextjs";
+import { Inter, Space_Grotesk, Vazirmatn } from "next/font/google";
+import "./globals.css";
+import type { Metadata } from "next";
+import { ThemeProvider } from "@/context/ThemeProvider";
 
 export const metadata: Metadata = {
-  title: 'دوربین | شبکه اجتماعی',
-  description: 'یک شبکه اجتماعی برای به اشتراک گذاشتن لحظه های زندگیتان',
+  title: "دوربین | شبکه اجتماعی",
+  description: "یک شبکه اجتماعی برای به اشتراک گذاشتن لحظه های زندگیتان",
   icons: {
-    icon: '/favicon.ico',
+    icon: "/favicon.ico",
   },
-}
+};
 
 const inter = Inter({
-  subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700' ,'800', '900'],
-  variable: '--font-inter',
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-inter",
 });
 
 const spaceGrotesk = Space_Grotesk({
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  variable: '--font-spaceGrotesk',
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-spaceGrotesk",
 });
 
 const vazirmatn = Vazirmatn({
-  subsets: ['latin'],
-  weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
-  variable: '--font-vazirmatn',
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  variable: "--font-vazirmatn",
 });
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
   return (
-    <ClerkProvider>
-      <html lang="en">
-        <body className={`${inter.variable} ${spaceGrotesk.variable} ${vazirmatn.variable}`}>
-          <SignedOut>
-            <SignInButton />
-          </SignedOut>
-          <SignedIn>
-            <UserButton />
-          </SignedIn>
-          {children}
-        </body>
-      </html>
-    </ClerkProvider>
-  )
+    <html lang="fa" dir="rtl">
+      <body
+        className={`${inter.variable} ${spaceGrotesk.variable} ${vazirmatn.variable}`}
+      >
+        <ClerkProvider
+          appearance={{
+            elements: {
+              formButtonPrimary:
+                "bg-primary-500 text-white hover:bg-primary-600 !border-none !outline-none !shadow-none",
+              footerActionLink: "text-primary-500 hover:text-primary-600",
+            },
+          }}
+        >
+          <ThemeProvider>
+            <SignedIn>
+              <UserButton />
+            </SignedIn>
+            {children}
+          </ThemeProvider>
+        </ClerkProvider>
+      </body>
+    </html>
+  );
 }

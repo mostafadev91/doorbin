@@ -1,9 +1,0 @@
-{
-  "typescript.tsdk": "node_modules/typescript/lib",
-  "[tailwindcss]": {
-    "gitlens.codeLens.scopes": ["document"]
-  },
-  "files.associations": {
-    "*.css": "tailwindcss"
-  }
-}
