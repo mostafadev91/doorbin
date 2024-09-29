@@ -2,6 +2,115 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer utilities {
+  * {
+    @apply font-vazirmatn;
+  }
+
+  .background-light50_dark950 {
+    @apply bg-light-50 dark:bg-dark-950 !important;
+  }
+
+  .background-light100_dark900 {
+    @apply bg-light-100 dark:bg-dark-900 !important;
+  }
+
+  .background-light200_dark800 {
+    @apply bg-light-200 dark:bg-dark-800 !important;
+  }
+
+  .text-light50_dark950 {
+    @apply text-dark-950 dark:text-light-50 !important;
+  }
+
+  .text-light100_dark900 {
+    @apply text-dark-900 dark:text-light-100 !important;
+  }
+
+  .text-light200_dark800 {
+    @apply text-dark-800 dark:text-light-200 !important;
+  }
+
+  .text-light300_dark700 {
+    @apply text-dark-700 dark:text-light-300 !important;
+  }
+
+  .text-light400_dark600 {
+    @apply text-dark-600 dark:text-light-400 !important;
+  }
+
+  .text-light500_dark500 {
+    @apply text-dark-500 dark:text-light-500 !important;
+  }
+
+  .h1-bold {
+    @apply text-3xl font-bold;
+  }
+
+  .h2-bold {
+    @apply text-2xl font-bold;
+  }
+
+  .h2-semibold {
+    @apply text-2xl font-semibold !important;
+  }
+
+  .h3-bold {
+    @apply text-lg font-bold !important;
+  }
+
+  .h3-semibold {
+    @apply text-lg font-semibold !important;
+  }
+
+  .base-medium {
+    @apply text-base font-medium !important;
+  }
+
+  .base-semibold {
+    @apply text-base font-semibold !important;
+  }
+
+  .base-bold {
+    @apply text-base font-bold !important;
+  }
+
+  .body-regular {
+    @apply text-sm font-normal !important;
+  }
+
+  .body-medium {
+    @apply text-sm font-medium !important;
+  }
+
+  .body-semibold {
+    @apply text-sm font-semibold !important;
+  }
+
+  .small-regular {
+    @apply text-xs font-normal;
+  }
+  .small-medium {
+    @apply text-xs font-medium;
+  }
+
+  .small-semibold {
+    @apply text-xs font-semibold;
+  }
+
+  .subtle-medium {
+    @apply text-[.625rem] font-medium !important;
+  }
+
+  .subtle-regular {
+    @apply text-[.625rem] font-normal !important;
+  }
+
+  .placeholder {
+    @apply placeholder:text-light-500 dark:placeholder:text-light-500;
+  }
+}
+
 /* @layer utilities {
   .background-light850_dark100 {
     @apply bg-light-850 dark:bg-dark-100;

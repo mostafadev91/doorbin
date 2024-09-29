@@ -1,5 +1,5 @@
 import React from "react";
-import { ClerkProvider, SignedIn, UserButton } from "@clerk/nextjs";
+import { ClerkProvider } from "@clerk/nextjs";
 import { Inter, Space_Grotesk, Vazirmatn } from "next/font/google";
 import "./globals.css";
 import type { Metadata } from "next";
@@ -50,12 +50,7 @@ export default function RootLayout({
             },
           }}
         >
-          <ThemeProvider>
-            <SignedIn>
-              <UserButton />
-            </SignedIn>
-            {children}
-          </ThemeProvider>
+          <ThemeProvider>{children}</ThemeProvider>
         </ClerkProvider>
       </body>
     </html>
